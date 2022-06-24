@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HelloBIIDemo</string>
+    <string name="error_message_map_app">Mapアプリが起動できません</string>
 </resources>

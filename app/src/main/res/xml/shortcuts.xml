@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!-- This is a sample shortcuts.xml -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    Built-in Intents for Android Auto -->
+    <!-- https://developer.android.com/reference/app-actions/built-in-intents/travel/get-parking-facility -->
+    <capability android:name="actions.intent.GET_PARKING_FACILITY">
+        <intent>
+            <url-template android:value="https://leo{?name,address,disambiguatingDescription,latitude,longitude,type}" />
+
+            <!-- Eg. name = "Googleplex" -->
+            <parameter
+                android:name="parkingFacility.name"
+                android:key="name" />
+            <!-- Eg. address = "1600 Amphitheatre Pkwy, Mountain View, CA 94043" -->
+            <parameter
+                android:name="parkingFacility.address"
+                android:key="address" />
+            <!-- Eg. disambiguatingDescription = "valet" -->
+            <parameter
+                android:name="parkingFacility.disambiguatingDescription"
+                android:key="disambiguatingDescription" />
+            <!-- Eg. latitude = "37.3861" -->
+            <parameter
+                android:name="parkingFacility.geo.latitude"
+                android:key="latitude" />
+            <!-- Eg. longitude = "-122.084" -->
+            <parameter
+                android:name="parkingFacility.geo.longitude"
+                android:key="longitude" />
+            <!-- ParkingFacility -->
+            <parameter
+                android:name="parkingFacility.@type"
+                android:key="type" />
+        </intent>
+    </capability>
+
+    <!-- https://developer.android.com/reference/app-actions/built-in-intents/travel/get-charging-station -->
+    <capability android:name="actions.intent.GET_CHARGING_STATION">
+        <intent>
+            <url-template android:value="https://leo{?name,address,latitude,longitude,type}" />
+            <!-- Eg. name = "Googleplex" -->
+            <parameter
+                android:name="chargingStation.name"
+                android:key="name" />
+            <!-- Eg. address = "1600 Amphitheatre Pkwy, Mountain View, CA 94043" -->
+            <parameter
+                android:name="chargingStation.address"
+                android:key="address" />
+            <!-- Eg. latitude = "37.3861" -->
+            <parameter
+                android:name="chargingStation.geo.latitude"
+                android:key="latitude" />
+            <!-- Eg. longitude = "-122.084" -->
+            <parameter
+                android:name="chargingStation.geo.longitude"
+                android:key="longitude" />
+
+            <!-- ChargingStation -->
+            <parameter
+                android:name="chargingStation.@type"
+                android:key="type" />
+        </intent>
+    </capability>
+</shortcuts>
